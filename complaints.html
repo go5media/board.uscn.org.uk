@@ -1,156 +1,305 @@
 <!DOCTYPE html>
-<html  >
+<html lang="en">
 <head>
-  <!-- Site made with Mobirise Website Builder v6.0.6, https://mobirise.com -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v6.0.6, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/20250726-1911280-1.jpg" type="image/x-icon">
-  <meta name="description" content="">
-  
-  
-  <title>Official USCN Oversight Board - Complaint Contact Information</title>
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/parallax/jarallax.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=jyqxNi"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=jyqxNi" type="text/css">
-
-  
-  
-  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oversight Board — UK Safety Camera Network</title>
+<style>
+  :root {
+    --ink: #0f1a24;
+    --muted: #556270;
+    --line: #dde3ea;
+    --accent: #1f6feb;
+    --panel: #f6f8fa;
+    --panel-strong: #eef2f6;
+    --shell: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+    background: var(--shell);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  header {
+    border-bottom: 1px solid var(--line);
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .brand {
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    font-size: 15px;
+  }
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+  }
+  nav a:hover { color: var(--ink); }
+  .hero {
+    padding: 72px 32px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 44px;
+    line-height: 1.15;
+    margin: 0 0 20px;
+    letter-spacing: -0.01em;
+  }
+  .tagline {
+    color: var(--muted);
+    font-size: 15px;
+    letter-spacing: 0.04em;
+  }
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 32px 80px;
+  }
+  section { margin-top: 56px; }
+  h2 {
+    font-size: 26px;
+    margin: 0 0 14px;
+    letter-spacing: -0.005em;
+  }
+  h3 {
+    font-size: 18px;
+    margin: 24px 0 8px;
+  }
+  p { margin: 0 0 14px; }
+  ul, ol { padding-left: 22px; margin: 6px 0 14px; }
+  li { margin-bottom: 6px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 16px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+  }
+  .card h3 { margin-top: 0; }
+  .levels {
+    counter-reset: level;
+    list-style: none;
+    padding-left: 0;
+  }
+  .levels > li {
+    counter-increment: level;
+    background: var(--panel-strong);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    position: relative;
+  }
+  .levels > li::before {
+    content: "Level " counter(level);
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .levels strong { display: block; font-size: 17px; margin-bottom: 4px; }
+  .note {
+    border-left: 3px solid var(--accent);
+    background: #f2f7ff;
+    padding: 14px 18px;
+    border-radius: 4px;
+    color: var(--ink);
+    font-size: 15px;
+    margin: 10px 0 16px;
+  }
+  .contact {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 22px 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px 24px;
+  }
+  .contact a { color: var(--accent); text-decoration: none; }
+  .contact a:hover { text-decoration: underline; }
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 28px 32px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .foot-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 32px; }
+    .hero { padding: 48px 24px 24px; }
+    main { padding: 16px 24px 60px; }
+    header { padding: 16px 24px; }
+    nav a { margin-left: 14px; }
+    .foot-grid { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
 <body>
-  
-  <section data-bs-version="5.1" class="header16 cid-vpLmvSD76q mbr-fullscreen mbr-parallax-background" id="header17-2f">
-  
-  
-  <div class="container-fluid">
-    <div class="row">
-      <div class="content-wrap col-12 col-md-12">
-        <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1"><strong>USCN</strong><br><strong>OVERSIGHT</strong><br><strong>BOARD</strong></h1>
-        
-        <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">Complaints</p>
-        <div class="mbr-section-btn"><a class="btn btn-white-outline display-7" href="index.html">Board Page</a></div>
-      </div>
+
+<header>
+  <div class="brand">USCN &middot; Oversight Board</div>
+  <nav>
+    <a href="#mission">Mission</a>
+    <a href="#how">How it works</a>
+    <a href="#levels">Board structure</a>
+    <a href="#compliance">Compliance</a>
+    <a href="#apply">Apply</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Secure &middot; Ethical &middot; Transparent &middot; For Public Safety</div>
+  <h1>Oversight Board</h1>
+  <p class="tagline">Independent scrutiny of how the UK Safety Camera Network is run, how footage is handled, and how community concerns are addressed.</p>
+</div>
+
+<main>
+
+<section id="mission">
+  <h2>Our mission</h2>
+  <p>The UK Safety Camera Network has two core objectives: to protect the public through community-hosted CCTV, and to ensure that people can access their own information quickly, lawfully, and without obstruction.</p>
+  <p>If you care about public safety and about transparent, accountable use of surveillance, joining the USCN Oversight Board is a way to help improve how the network operates across the UK.</p>
+</section>
+
+<section id="how">
+  <h2>How it works</h2>
+  <p>There are three categories of board work. You can serve on the two interconnected boards (Oversight and Community) at the same time. The Complaints Board is strictly separate and its members cannot sit on either of the others, to preserve its independence.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Oversight</h3>
+      <p>Audits how the network operates day to day: the use of cameras, data-processing activities, adherence to each camera&rsquo;s DPIA, and the conduct of staff and volunteers. Issues findings and recommendations on operational complaints that do not require external referral.</p>
+    </div>
+    <div class="card">
+      <h3>Community</h3>
+      <p>Represents residents, hosts, and users of the areas covered by the network. Acts as a local voice on where cameras are placed, what signage is used, and how the network engages with the communities it serves.</p>
+    </div>
+    <div class="card">
+      <h3>Complaints</h3>
+      <p>Handles complaints about the other boards, about the main legal entity, or about the network&rsquo;s wider conduct. Where appropriate, refers matters to external bodies such as the Information Commissioner&rsquo;s Office (ICO) or the police.</p>
     </div>
   </div>
 </section>
 
-<section data-bs-version="5.1" class="article07 cid-vpLmER9006" id="article07-2g">
-  
+<section id="levels">
+  <h2>Board structure</h2>
+  <ol class="levels">
+    <li>
+      <strong>UK Safety Camera Network Ltd</strong>
+      The main legal entity. Holds statutory responsibility as data controller and operator of the network.
+    </li>
+    <li>
+      <strong>Interconnected boards</strong>
+      The Oversight Board (legal and operational compliance) and the Community Board (local representation). Members of these boards may serve on both.
+    </li>
+    <li>
+      <strong>Independent Complaints Board</strong>
+      Structurally separate from the main entity and from the interconnected boards, with strict eligibility rules to protect its independence.
+    </li>
+  </ol>
+</section>
 
-  
-  
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="card col-md-12 col-lg-10">
-        <div class="card-wrapper">
-          <h3 class="card-title mbr-fonts-style mbr-white mt-3 mb-4 display-2"><strong>Complaint</strong></h3>
-          <div class="row card-box align-left">
-            
-            
-            
-            <div class="item features-without-image col-12 active">
-              <div class="item-wrapper">
-                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5">
-                  <strong>Information</strong></h4>
-                <p class="mbr-text mbr-fonts-style display-7">
-                  your complain to&nbsp;complaints@uscn.org.uk or&nbsp;complaints@uscn.uk will be sent directly to our oversight board for review, you will get an outcome report sent to your email detailing the board's findings and any actions taken</p>
-              </div>
-            </div><div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5">
-                  <strong>Making a new complaint</strong></h4>
-                <p class="mbr-text mbr-fonts-style display-7">E-Mail: complaints@uscn.org.uk<br><br>Phone: 0330 520 2254<br><br>Mail<br>UK SAFETY CAMERA NETWORK LTD<br>124 City Rd, London,&nbsp;EC1V 2NX</p>
-              </div>
-            </div><div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5"><strong>Following up on a complaint</strong></h4>
-                <p class="mbr-text mbr-fonts-style display-7">E-Mail: complaint.followup@uscn.org.uk<br><br>Phone: 0330 520 2254<br><br>Mail<br>UK SAFETY CAMERA NETWORK LTD<br>124 City Rd, London,&nbsp;EC1V 2NX</p>
-              </div>
-            </div><div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5"><strong>Complaint about the board</strong></h4>
-                <p class="mbr-text mbr-fonts-style display-7">E-Mail: oversight.complaints@board.uscn.org.uk&nbsp;(To CT and Community Boards)<br>E-Mail: community.complaints@board.uscn.org.uk (To CT and Oversight Boards)<br>E-Mail:&nbsp;complaints.team@board.uscn.org.uk (To Complaint Team Volunteers CT)<br><br>Phone: 0330 520 2254<br><br>Mail<br>UK SAFETY CAMERA NETWORK LTD<br>124 City Rd, London,&nbsp;EC1V 2NX</p>
-              </div>
-            </div><div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5"><strong>Complaint Outcome Appeal</strong></h4>
-                <p class="mbr-text mbr-fonts-style display-7">E-Mail: complaint.appeal@board.uscn.org.uk<br><br>Phone: 0330 520 2254<br><br>Mail<br>UK SAFETY CAMERA NETWORK LTD<br>124 City Rd, London,&nbsp;EC1V 2NX</p>
-              </div>
-            </div><div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5"><strong>Board Complaint Outcome Appeal</strong></h4>
-                <p class="mbr-text mbr-fonts-style display-7">E-Mail: complaint.appeal@board.uscn.org.uk (To Complaint Team Volunteers CT)<br><br>Phone: 0330 520 2254<br><br>Mail<br>UK SAFETY CAMERA NETWORK LTD<br>124 City Rd, London,&nbsp;EC1V 2NX</p>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
+<section id="independence">
+  <h2>How the Complaints Board is kept independent</h2>
+  <p>To serve on the Complaints Board, a person must meet all of the following:</p>
+  <ol>
+    <li>Not be a member of the Community Board.</li>
+    <li>Not be a member of the Oversight Board.</li>
+    <li>Not be a director, officer, employee, or contractor of UK Safety Camera Network Ltd.</li>
+    <li>Not have any financial interest in the network or in a supplier to the network.</li>
+    <li>Not have a close family relationship (spouse or partner, parent, child, sibling, aunt, uncle, or first cousin) with any member of the other boards or with any director, officer, or employee of the main legal entity.</li>
+  </ol>
+  <p>In addition, every Complaints Board member is required, on appointment and annually thereafter, to declare any personal, professional, or historical relationship that could reasonably be seen to affect their independence in a particular case. Where such a relationship arises in relation to a specific complaint, the member must recuse themselves from that matter. This declare-and-recuse approach is standard practice for statutory panels and is more effective than an outright ban on friendships, which cannot be reliably enforced.</p>
+</section>
+
+<section id="compliance">
+  <h2>Legal compliance and referrals</h2>
+
+  <h3>Reporting to the Information Commissioner&rsquo;s Office (ICO)</h3>
+  <p>Personal data breaches likely to result in a risk to the rights and freedoms of individuals must be reported to the ICO within 72 hours of the network becoming aware of them, in accordance with Article 33 UK GDPR. The three categories the network monitors for are:</p>
+  <ul>
+    <li><strong>Confidentiality breach</strong> &mdash; unauthorised or accidental disclosure of, or access to, personal data. Examples include accessing personal data stored on a lost laptop, phone, or other device; sending an email or letter to the wrong recipient; disclosing information over the phone to the wrong person; or CCTV footage being obtained outside a formal Data Subject Access Request.</li>
+    <li><strong>Availability breach</strong> &mdash; accidental or unauthorised loss of access to, or destruction of, personal data. Examples include loss of a memory stick, laptop, or device; a denial-of-service attack; infection of systems by ransomware; deleting personal data in error; loss of access to personal data stored on systems; inability to restore data from backup; or loss of an encryption key.</li>
+    <li><strong>Integrity breach</strong> &mdash; unauthorised or accidental alteration of personal data.</li>
+  </ul>
+  <p>Where a data subject&rsquo;s rights of access, rectification, or erasure have been obstructed, delayed beyond statutory deadlines, or otherwise frustrated, the Oversight Board treats this as a compliance failure to be investigated and, where appropriate, disclosed to the data subject and referred onward.</p>
+
+  <h3>Referrals to the police</h3>
+  <p>Some matters go beyond compliance and are referred to the police:</p>
+  <ul>
+    <li>Where footage captures a criminal offence, including but not limited to serious violence, sexual offences, or hate crimes motivated by a protected characteristic under the Equality Act 2010.</li>
+    <li>Where an audit finds that an operator has deliberately repositioned a camera&rsquo;s field of view for the purpose of unauthorised surveillance of individuals &mdash; for example, angling a camera to look into private windows &mdash; and the conduct is capable of amounting to a criminal offence such as voyeurism.</li>
+    <li>Where footage subject to a formal preservation notice or an active investigation is lost, deleted, or otherwise not securely retained, and the loss appears to be intentional or reckless rather than accidental.</li>
+  </ul>
+  <p>Lower-level breaches that do not meet the threshold for police referral &mdash; for example, an operator who moves a camera without authorisation but without any voyeuristic or malicious purpose &mdash; are handled internally as disciplinary matters and reported to the ICO where a personal data breach has occurred.</p>
+</section>
+
+<section id="apply">
+  <h2>Apply</h2>
+  <p>Applications for board membership are open. Please note that you may apply for either or both of the Oversight and Community boards, but not the Complaints Board in the same application, as the Complaints Board is subject to the independence rules set out above.</p>
+  <div class="contact">
+    <div>
+      <strong>Oversight Board</strong><br>
+      <a href="mailto:join.admin@board.uscn.uk">join.admin@board.uscn.uk</a>
+    </div>
+    <div>
+      <strong>Community Board</strong><br>
+      <a href="mailto:join.community@board.uscn.uk">join.community@board.uscn.uk</a>
+    </div>
+    <div>
+      <strong>General enquiries</strong><br>
+      0330 520 2254
     </div>
   </div>
 </section>
 
-<section data-bs-version="5.1" class="footer1 cid-uSNH93SEP0" once="footers" id="footer01-2e">
-	
+</main>
 
-	
-	
-	<div class="container">
-		<div class="row mbr-white">
-			<div class="col-12 col-md-6 col-lg-3">
-				<h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-5">
-					<a href="index.html" class="text-black"><strong>USCN.UK</strong></a></h5>
-				<ul class="list mbr-fonts-style display-7">
-					<li class="mbr-text item-wrap"><span style="font-size: 1.4rem;"><a href="https://uscn.org.uk/" class="text-primary">Home</a></span></li><li class="mbr-text item-wrap"><a href="assets/files/Privacy-Policy.pdf" class="text-primary" target="_blank">Privacy</a><span style="font-size: 1.4rem;"><a href="assets/files/Privacy-Policy.pdf" class="text-primary" target="_blank">&nbsp;Policy</a></span><br></li><a href="assets/files/Privacy-Policy.pdf" class="text-primary" target="_blank">
-					</a><li class="mbr-text item-wrap"><span style="font-size: 1.4rem;"><a href="assets/files/Terms-ofUse.pdf" class="text-primary" target="_blank">Terms</a></span></li><li class="mbr-text item-wrap"><br></li><li class="mbr-text item-wrap"><span style="font-size: 1.4rem;"><br></span><br></li>
-				</ul>
-			</div>
-			<div class="col-12 col-md-6 col-lg-3">
-				<h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-5">
-					<strong>Features</strong>
-				</h5>
-				<ul class="list mbr-fonts-style display-7">
-					<li class="mbr-text item-wrap"><span style="font-size: 1.4rem;"><a href="https://uscn.org.uk/host.html#article07-y" class="text-primary">Join Us</a></span></li><a href="host.html#article07-y" class="text-primary">
-					</a><li class="mbr-text item-wrap"><a href="https://uscn.org.uk/host.html#article07-y" class="text-primary">Installation</a></li><a href="page3.html#article07-y" class="text-primary">
-					</a><li class="mbr-text item-wrap"><a href="https://uscn.org.uk/support.html#article07-t" class="text-primary">Maintenance&nbsp;</a></li>
-				</ul>
-			</div>
-			<div class="col-12 col-md-6 col-lg-3">
-				<h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-5">
-					<strong>Support</strong>
-				</h5>
-				<ul class="list mbr-fonts-style display-7">
-					<li class="mbr-text item-wrap"><a href="https://uscn.org.uk/support.html" class="text-primary">Support</a></li>
-					<li class="mbr-text item-wrap"><span style="font-size: 1.4rem;"><a href="https://uscn.org.uk/contact.html" class="text-primary">Contacts</a></span><br></li>
-					<li class="mbr-text item-wrap"><a href="https://uscn.org.uk/support.html#list01-u" class="text-primary">FAQ</a></li>
-					<li class="mbr-text item-wrap"><a href="https://uscn.org.uk/contact.html#form02-o" class="text-primary">Report</a></li>
-				</ul>
-			</div>
-			<div class="col-12 col-md-6 col-lg-3">
-				<h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-5">&nbsp;</h5>
-				<ul class="list mbr-fonts-style display-7">
-					<li class="mbr-text item-wrap"><br></li>
-					<li class="mbr-text item-wrap"><br></li>
-					<li class="mbr-text item-wrap"><br></li><li class="mbr-text item-wrap"><br></li>
-				</ul>
-			</div>
-			
-			<div class="col-12 mt-4">
-				<p class="mbr-text mb-0 mbr-fonts-style copyright align-center display-7">
-					© Copyright 2026 USCN - All Rights Reserved<br><br>UK SAFETY CAMERA NETWORK LTD:<br>Company Number: 17346373<br>Registered In England and Wales<br><br>USCN Is a trading name of&nbsp;UK SAFETY CAMERA NETWORK LTD<br></p>
-			</div>
-		</div>
-	</div>
-</section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/theme/js/script.js"></script>  
-  
-  
+<footer>
+  <div class="foot-grid">
+    <div>
+      <div><strong>USCN</strong> &middot; Home &middot; Privacy Policy &middot; Terms</div>
+      <div style="margin-top: 8px;">Features &middot; Join Us &middot; Installation &middot; Maintenance &middot; Support &middot; Contacts &middot; FAQ &middot; Report</div>
+    </div>
+    <div style="text-align: right;">
+      &copy; 2026 USCN. All rights reserved.<br>
+      UK Safety Camera Network Ltd &middot; Company No. 17346373<br>
+      Registered in England and Wales<br>
+      USCN is a trading name of UK Safety Camera Network Ltd.
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
