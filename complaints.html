@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oversight Board — UK Safety Camera Network</title>
+<title>Complaints — UK Safety Camera Network</title>
 <style>
   :root {
     --ink: #0f1a24;
@@ -85,63 +85,96 @@
   p { margin: 0 0 14px; }
   ul, ol { padding-left: 22px; margin: 6px 0 14px; }
   li { margin-bottom: 6px; }
-  .card {
+  .route {
     background: var(--panel);
     border: 1px solid var(--line);
     border-radius: 10px;
-    padding: 22px 24px;
-    margin-bottom: 16px;
+    padding: 20px 24px;
+    margin-bottom: 14px;
   }
-  .grid {
+  .route h3 {
+    margin: 0 0 6px;
+    font-size: 17px;
+  }
+  .route .use {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .route dl {
+    margin: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 14px;
+    grid-template-columns: 90px 1fr;
+    row-gap: 4px;
+    column-gap: 14px;
+    font-size: 15px;
   }
-  .card h3 { margin-top: 0; }
-  .levels {
-    counter-reset: level;
-    list-style: none;
-    padding-left: 0;
+  .route dt {
+    color: var(--muted);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding-top: 3px;
   }
-  .levels > li {
-    counter-increment: level;
+  .route dd { margin: 0; }
+  .route a { color: var(--accent); text-decoration: none; word-break: break-word; }
+  .route a:hover { text-decoration: underline; }
+  .flow {
     background: var(--panel-strong);
     border: 1px solid var(--line);
     border-radius: 10px;
-    padding: 18px 22px;
-    margin-bottom: 12px;
+    padding: 22px 24px;
+    margin-top: 16px;
+  }
+  .flow ol {
+    counter-reset: step;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  .flow ol > li {
+    counter-increment: step;
+    padding-left: 42px;
     position: relative;
+    margin-bottom: 14px;
   }
-  .levels > li::before {
-    content: "Level " counter(level);
-    display: inline-block;
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 6px;
+  .flow ol > li:last-child { margin-bottom: 0; }
+  .flow ol > li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .levels strong { display: block; font-size: 17px; margin-bottom: 4px; }
-  .note {
+  .callout {
     border-left: 3px solid var(--accent);
     background: #f2f7ff;
     padding: 14px 18px;
     border-radius: 4px;
-    color: var(--ink);
     font-size: 15px;
-    margin: 10px 0 16px;
+    margin: 16px 0;
   }
-  .contact {
+  .postal {
     background: var(--panel);
     border: 1px solid var(--line);
     border-radius: 10px;
-    padding: 22px 24px;
+    padding: 20px 24px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 14px 24px;
+    font-size: 15px;
+    align-items: center;
   }
-  .contact a { color: var(--accent); text-decoration: none; }
-  .contact a:hover { text-decoration: underline; }
+  .postal strong { display: block; margin-bottom: 4px; }
   footer {
     border-top: 1px solid var(--line);
     padding: 28px 32px;
@@ -162,124 +195,127 @@
     main { padding: 16px 24px 60px; }
     header { padding: 16px 24px; }
     nav a { margin-left: 14px; }
-    .foot-grid { grid-template-columns: 1fr; }
+    .foot-grid, .postal { grid-template-columns: 1fr; }
+    .route dl { grid-template-columns: 74px 1fr; }
   }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="brand">USCN &middot; Oversight Board</div>
+  <div class="brand">USCN &middot; Complaints</div>
   <nav>
-    <a href="#mission">Mission</a>
-    <a href="#how">How it works</a>
-    <a href="#levels">Board structure</a>
-    <a href="#compliance">Compliance</a>
-    <a href="#apply">Apply</a>
+    <a href="#overview">Overview</a>
+    <a href="#operational">Operational</a>
+    <a href="#board">About the board</a>
+    <a href="#appeals">Appeals</a>
+    <a href="#post">Post</a>
   </nav>
 </header>
 
 <div class="hero">
   <div class="eyebrow">Secure &middot; Ethical &middot; Transparent &middot; For Public Safety</div>
-  <h1>Oversight Board</h1>
-  <p class="tagline">Independent scrutiny of how the UK Safety Camera Network is run, how footage is handled, and how community concerns are addressed.</p>
+  <h1>Complaints</h1>
+  <p class="tagline">How to raise a concern about the UK Safety Camera Network, what happens next, and how to appeal.</p>
 </div>
 
 <main>
 
-<section id="mission">
-  <h2>Our mission</h2>
-  <p>The UK Safety Camera Network has two core objectives: to protect the public through community-hosted CCTV, and to ensure that people can access their own information quickly, lawfully, and without obstruction.</p>
-  <p>If you care about public safety and about transparent, accountable use of surveillance, joining the USCN Oversight Board is a way to help improve how the network operates across the UK.</p>
-</section>
-
-<section id="how">
-  <h2>How it works</h2>
-  <p>There are three categories of board work. You can serve on the two interconnected boards (Oversight and Community) at the same time. The Complaints Board is strictly separate and its members cannot sit on either of the others, to preserve its independence.</p>
-  <div class="grid">
-    <div class="card">
-      <h3>Oversight</h3>
-      <p>Audits how the network operates day to day: the use of cameras, data-processing activities, adherence to each camera&rsquo;s DPIA, and the conduct of staff and volunteers. Issues findings and recommendations on operational complaints that do not require external referral.</p>
-    </div>
-    <div class="card">
-      <h3>Community</h3>
-      <p>Represents residents, hosts, and users of the areas covered by the network. Acts as a local voice on where cameras are placed, what signage is used, and how the network engages with the communities it serves.</p>
-    </div>
-    <div class="card">
-      <h3>Complaints</h3>
-      <p>Handles complaints about the other boards, about the main legal entity, or about the network&rsquo;s wider conduct. Where appropriate, refers matters to external bodies such as the Information Commissioner&rsquo;s Office (ICO) or the police.</p>
-    </div>
+<section id="overview">
+  <h2>Overview</h2>
+  <p>Complaints reach USCN in one of two ways depending on what they are about. Operational complaints &mdash; how a camera is used, how data has been handled, day-to-day conduct of the network &mdash; are handled first by the Oversight Board. Complaints about a board or about the integrity of the network go directly to the independent Complaints Board and are not seen by anyone on the Oversight or Community boards.</p>
+  <p>Every complaint results in a written outcome sent to your email, detailing the board&rsquo;s findings and any action taken.</p>
+  <div class="callout">
+    <strong>Before making a formal complaint:</strong> if the issue is local &mdash; for example, a camera that appears to overlook your window &mdash; your Community Board neighbourhood representative, if one has been appointed for your area, is often the fastest first point of contact. You are also free to submit a formal complaint straight away, or to do both at the same time.
   </div>
 </section>
 
-<section id="levels">
-  <h2>Board structure</h2>
-  <ol class="levels">
-    <li>
+<section id="operational">
+  <h2>Operational complaints</h2>
+  <p>Use this route for concerns about how cameras are installed or operated, how footage or personal data has been handled, or the conduct of network staff or contractors.</p>
+
+  <div class="route">
+    <h3>Make a new complaint</h3>
+    <div class="use">For any operational or data-handling concern.</div>
+    <dl>
+      <dt>Email</dt>   <dd><a href="mailto:complaints@uscn.org.uk">complaints@uscn.org.uk</a></dd>
+      <dt>Phone</dt>   <dd>0330 520 2254</dd>
+    </dl>
+  </div>
+
+  <div class="route">
+    <h3>Follow up on an existing complaint</h3>
+    <div class="use">To chase progress, add information, or ask about timing.</div>
+    <dl>
+      <dt>Email</dt>   <dd><a href="mailto:complaint.followup@uscn.org.uk">complaint.followup@uscn.org.uk</a></dd>
+      <dt>Phone</dt>   <dd>0330 520 2254</dd>
+    </dl>
+  </div>
+
+  <div class="flow">
+    <h3 style="margin-top: 0;">How an operational complaint is handled</h3>
+    <ol>
+      <li>Your complaint is received and acknowledged by the Oversight Board.</li>
+      <li>The Oversight Board investigates and reaches a provisional view. If it concludes that no further action is needed, that is the outcome and it is communicated to you in writing.</li>
+      <li>If the Oversight Board concludes that action <em>is</em> required &mdash; for example, that a data request was mishandled, or that a camera needs to be repositioned, taken down, or its DPIA revised &mdash; the matter is referred to the independent Complaints Board.</li>
+      <li>The Complaints Board reviews the matter and issues the final ruling, which is binding within the network. You receive the written outcome by email.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="board">
+  <h2>Complaints about a board</h2>
+  <p>If your complaint is about the conduct of a board member, a board&rsquo;s handling of a matter, or the integrity of the network itself, it goes directly to the independent Complaints Board. Complaints sent to this address are not shared with the Oversight Board or the Community Board.</p>
+
+  <div class="route">
+    <h3>Contact the Complaints Board directly</h3>
+    <div class="use">For complaints about the Oversight Board, the Community Board, or the main legal entity.</div>
+    <dl>
+      <dt>Email</dt>   <dd><a href="mailto:complaints.team@board.uscn.org.uk">complaints.team@board.uscn.org.uk</a></dd>
+      <dt>Phone</dt>   <dd>0330 520 2254</dd>
+    </dl>
+  </div>
+
+  <div class="callout">
+    The Complaints Board is structurally independent of the other boards and of UK Safety Camera Network Ltd, with strict eligibility rules covering board membership, employment, financial interest, and close family relationships. Its members declare and recuse themselves from any specific matter in which their independence could reasonably be questioned.
+  </div>
+</section>
+
+<section id="appeals">
+  <h2>Appeals</h2>
+  <p>Both an operational complaint outcome and a Complaints Board outcome can be appealed. Both routes are handled by the independent Complaints Board and use the same appeals mailbox &mdash; separated below only for clarity about which kind of decision you are appealing.</p>
+
+  <div class="route">
+    <h3>Appeal an operational complaint outcome</h3>
+    <div class="use">You have received an outcome from the Oversight Board or the Complaints Board on an operational complaint and want it reviewed.</div>
+    <dl>
+      <dt>Email</dt>   <dd><a href="mailto:complaint.appeal@board.uscn.org.uk">complaint.appeal@board.uscn.org.uk</a></dd>
+      <dt>Phone</dt>   <dd>0330 520 2254</dd>
+    </dl>
+  </div>
+
+  <div class="route">
+    <h3>Appeal a Complaints Board outcome</h3>
+    <div class="use">You have received an outcome from the Complaints Board on a complaint about a board and want it reviewed.</div>
+    <dl>
+      <dt>Email</dt>   <dd><a href="mailto:complaint.appeal@board.uscn.org.uk">complaint.appeal@board.uscn.org.uk</a></dd>
+      <dt>Phone</dt>   <dd>0330 520 2254</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="post">
+  <h2>By post</h2>
+  <p>Any of the routes above may also be reached by post. Please mark the envelope with the relevant route (for example, &ldquo;Operational Complaint&rdquo;, &ldquo;Complaint about a Board&rdquo;, or &ldquo;Appeal&rdquo;) so that internal handling can direct it to the correct board.</p>
+  <div class="postal">
+    <div>
       <strong>UK Safety Camera Network Ltd</strong>
-      The main legal entity. Holds statutory responsibility as data controller and operator of the network.
-    </li>
-    <li>
-      <strong>Interconnected boards</strong>
-      The Oversight Board (legal and operational compliance) and the Community Board (local representation). Members of these boards may serve on both.
-    </li>
-    <li>
-      <strong>Independent Complaints Board</strong>
-      Structurally separate from the main entity and from the interconnected boards, with strict eligibility rules to protect its independence.
-    </li>
-  </ol>
-</section>
-
-<section id="independence">
-  <h2>How the Complaints Board is kept independent</h2>
-  <p>To serve on the Complaints Board, a person must meet all of the following:</p>
-  <ol>
-    <li>Not be a member of the Community Board.</li>
-    <li>Not be a member of the Oversight Board.</li>
-    <li>Not be a director, officer, employee, or contractor of UK Safety Camera Network Ltd.</li>
-    <li>Not have any financial interest in the network or in a supplier to the network.</li>
-    <li>Not have a close family relationship (spouse or partner, parent, child, sibling, aunt, uncle, or first cousin) with any member of the other boards or with any director, officer, or employee of the main legal entity.</li>
-  </ol>
-  <p>In addition, every Complaints Board member is required, on appointment and annually thereafter, to declare any personal, professional, or historical relationship that could reasonably be seen to affect their independence in a particular case. Where such a relationship arises in relation to a specific complaint, the member must recuse themselves from that matter. This declare-and-recuse approach is standard practice for statutory panels and is more effective than an outright ban on friendships, which cannot be reliably enforced.</p>
-</section>
-
-<section id="compliance">
-  <h2>Legal compliance and referrals</h2>
-
-  <h3>Reporting to the Information Commissioner&rsquo;s Office (ICO)</h3>
-  <p>Personal data breaches likely to result in a risk to the rights and freedoms of individuals must be reported to the ICO within 72 hours of the network becoming aware of them, in accordance with Article 33 UK GDPR. The three categories the network monitors for are:</p>
-  <ul>
-    <li><strong>Confidentiality breach</strong> &mdash; unauthorised or accidental disclosure of, or access to, personal data. Examples include accessing personal data stored on a lost laptop, phone, or other device; sending an email or letter to the wrong recipient; disclosing information over the phone to the wrong person; or CCTV footage being obtained outside a formal Data Subject Access Request.</li>
-    <li><strong>Availability breach</strong> &mdash; accidental or unauthorised loss of access to, or destruction of, personal data. Examples include loss of a memory stick, laptop, or device; a denial-of-service attack; infection of systems by ransomware; deleting personal data in error; loss of access to personal data stored on systems; inability to restore data from backup; or loss of an encryption key.</li>
-    <li><strong>Integrity breach</strong> &mdash; unauthorised or accidental alteration of personal data.</li>
-  </ul>
-  <p>Where a data subject&rsquo;s rights of access, rectification, or erasure have been obstructed, delayed beyond statutory deadlines, or otherwise frustrated, the Oversight Board treats this as a compliance failure to be investigated and, where appropriate, disclosed to the data subject and referred onward.</p>
-
-  <h3>Referrals to the police</h3>
-  <p>Some matters go beyond compliance and are referred to the police:</p>
-  <ul>
-    <li>Where footage captures a criminal offence, including but not limited to serious violence, sexual offences, or hate crimes motivated by a protected characteristic under the Equality Act 2010.</li>
-    <li>Where an audit finds that an operator has deliberately repositioned a camera&rsquo;s field of view for the purpose of unauthorised surveillance of individuals &mdash; for example, angling a camera to look into private windows &mdash; and the conduct is capable of amounting to a criminal offence such as voyeurism.</li>
-    <li>Where footage subject to a formal preservation notice or an active investigation is lost, deleted, or otherwise not securely retained, and the loss appears to be intentional or reckless rather than accidental.</li>
-  </ul>
-  <p>Lower-level breaches that do not meet the threshold for police referral &mdash; for example, an operator who moves a camera without authorisation but without any voyeuristic or malicious purpose &mdash; are handled internally as disciplinary matters and reported to the ICO where a personal data breach has occurred.</p>
-</section>
-
-<section id="apply">
-  <h2>Apply</h2>
-  <p>Applications for board membership are open. Please note that you may apply for either or both of the Oversight and Community boards, but not the Complaints Board in the same application, as the Complaints Board is subject to the independence rules set out above.</p>
-  <div class="contact">
-    <div>
-      <strong>Oversight Board</strong><br>
-      <a href="mailto:join.admin@board.uscn.uk">join.admin@board.uscn.uk</a>
+      124 City Road<br>
+      London<br>
+      EC1V 2NX
     </div>
-    <div>
-      <strong>Community Board</strong><br>
-      <a href="mailto:join.community@board.uscn.uk">join.community@board.uscn.uk</a>
-    </div>
-    <div>
-      <strong>General enquiries</strong><br>
-      0330 520 2254
+    <div style="color: var(--muted); font-size: 14px;">
+      Postal correspondence is opened by administrative staff for sorting only; complaints marked for the Complaints Board are forwarded unopened to the Complaints Team.
     </div>
   </div>
 </section>
